@@ -1,7 +1,6 @@
 // ts2fable 0.7.1
 namespace Feliz.PureReactCarousel
 
-
 open Feliz
 open Fable.Core
 open Fable.Core.JsInterop
@@ -11,14 +10,14 @@ open Fable.React
 type PureReactCarousel =
     // static member inline carouselProvider (properties: IReactProperty list) =
     static member inline carouselProvider (props: IReactProperty list) =
-        //     Interop.reactApi.createElement (import "CarouselProvider" "pure-react-carousel", createObj !!properties)
-        ofImport "CarouselProvider" "pure-react-carousel" props []
+        Interop.reactApi.createElement (import "CarouselProvider" "pure-react-carousel", createObj !!props)
+        // ofImport "CarouselProvider" "pure-react-carousel" props []
     static member inline slider (props: IReactProperty list) =
-        // Interop.reactApi.createElement (import "Slider" "pure-react-carousel", createObj !!properties)
-        ofImport "Slider" "pure-react-carousel" props []
+        Interop.reactApi.createElement (import "Slider" "pure-react-carousel", createObj !!props)
+        // ofImport "Slider" "pure-react-carousel" props []
     static member inline slide (props: IReactProperty list) =
-        // Interop.reactApi.createElement (import "Slide" "pure-react-carousel", createObj !!properties)
-        ofImport "Slide" "pure-react-carousel" props []
+        Interop.reactApi.createElement (import "Slide" "pure-react-carousel", createObj !!props)
+        // ofImport "Slide" "pure-react-carousel" props []
 
 
 [<Erase>]
